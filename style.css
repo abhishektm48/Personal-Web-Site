@@ -1,0 +1,41 @@
+.menu{
+    padding: 16px;
+    font-family: dm sans;
+    text-decoration: none;
+    color: #13bb79;
+    font-size:large;
+}
+
+.ban{
+    color: #13bb79;
+    padding-top: 100px;
+    
+}
+.ban p{
+    margin-top: 20px;
+}
+
+.car{
+    margin-top: 20px;
+    border: 2px solid; 
+}
+
+.con{
+    font-family: dm sans;
+    color: #fff;
+}
+
+.icon{
+    padding: 15px;
+    cursor: pointer;
+}
+
+.sub{
+    margin-bottom: 30px;
+}
+
+.hea{
+    position:sticky; top:0; right:0; left:0; z-index:1000;
+}
+
+
