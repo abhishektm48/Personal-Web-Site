@@ -17,7 +17,7 @@
 
 .car{
     margin-top: 20px;
-    border: 2px solid; 
+    border: 2px solid;
 }
 
 .con{
@@ -38,4 +38,11 @@
     position:sticky; top:0; right:0; left:0; z-index:1000;
 }
 
-
+.menu {
+	 
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    text-decoration: none!important;
+  }
