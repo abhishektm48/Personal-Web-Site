@@ -1,14 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Rubik&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .menu{
     padding: 16px;
-    font-family: dm sans;
     text-decoration: none;
     color: #13bb79;
-    font-size:large;
+    
+}
+
+.menu a{
+    font-family: rubik;
+}
+
+.btns{
+   background-color: #13bb79;
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   padding: 5px 8px;
+}
+
+.btns:hover{
+    color: #13bb79;
+    background-color: #fff;
+    border: 1px solid #13bb79 ;
+}
+
+.btns-contact{
+    background-color: #13bb79;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 10px;
+ }
+
+.btns-contact:hover{
+    color: #13bb79;
+    background-color: #fff;
+    border: 1px solid #13bb79 ;
 }
 
 .ban{
     color: #13bb79;
-    padding-top: 100px;
+    padding: 100px;
     
 }
 .ban p{
@@ -18,11 +57,6 @@
 .car{
     margin-top: 20px;
     border: 2px solid;
-}
-
-.con{
-    font-family: dm sans;
-    color: #fff;
 }
 
 .icon{
@@ -38,7 +72,26 @@
     position:sticky; top:0; right:0; left:0; z-index:1000;
 }
 
-.menu {
+.headers{
+    padding: 15px;
+}
+
+.about{
+    padding: 20px;
+}
+
+.education{
+    height: 60%;
+    width: 60%;
+    float: right;
+}
+
+.contact p, h4{
+    font-family: rubik;
+    color: #fff;;
+}
+
+.menu, .btns {
 	 
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
