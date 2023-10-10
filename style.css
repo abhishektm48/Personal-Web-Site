@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Rubik&family=Signika:wght@700&display=swap');
+
 
 
 *{
@@ -6,52 +7,76 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
+:root{
+    --common-font: rubik;
+    --primary-color: #2BAE66;
+}
+
 .menu{
-    padding: 16px;
+    display: flex;
+    justify-content: end;
+}
+
+.menu-icon{
     text-decoration: none;
-    color: #13bb79;
-    
+    color: var(--primary-color);
+    padding: 15px;
+}
+
+.main-logo{
+    color: var(--primary-color) ; 
+    font-size: 20px; 
+    font-family: Signika; 
+    cursor: pointer;
 }
 
 .menu a{
-    font-family: rubik;
+    font-family: var(--common-font);
+    font-size: 18px;
+    font-weight:400;
 }
 
 .btns{
-   background-color: #13bb79;
+   background-color: var(--primary-color);
    color: #fff;
    border: none;
    border-radius: 5px;
    padding: 5px 8px;
+   font-family: var(--common-font);
 }
 
 .btns:hover{
-    color: #13bb79;
+    color: var(--primary-color);
     background-color: #fff;
     border: 1px solid #13bb79 ;
 }
 
-.btns-contact{
-    background-color: #13bb79;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 8px 10px;
- }
 
 .btns-contact:hover{
-    color: #13bb79;
+    color: var(--primary-color);
     background-color: #fff;
     border: 1px solid #13bb79 ;
 }
 
 .ban{
-    color: #13bb79;
-    padding: 100px;
-    
+    color: var(--primary-color);
+    padding: 100px;  
+}
+
+.ban h1{
+    font-size: 55px;
+    font-family: Signika;
+    text-shadow: 2px 2px 2px #b6b4b4;
+}
+.ban h2{
+    font-family: Signika;
+    text-shadow:1px 1px 2px #b6b4b4;
 }
 .ban p{
     margin-top: 20px;
+    font-family: var(--common-font);
 }
 
 .car{
@@ -70,28 +95,241 @@
 
 .hea{
     position:sticky; top:0; right:0; left:0; z-index:1000;
+    background-color: #ffffff;
 }
 
 .headers{
     padding: 15px;
 }
 
-.about{
+.person{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     padding: 20px;
 }
 
+.person h3{
+    font-family: var(--common-font);
+    font-weight: bold;
+    color: var(--primary-color);
+    padding-top: 20px;
+}
+
+.person p{
+    font-family: var(--common-font);
+    color: var(--primary-color);
+    line-height: 34px;
+}
+
+.work{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #FCF6F5;
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px #8888;
+}
+
+.work h3{
+    font-family: var(--common-font);
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.work p{
+    font-family: var(--common-font);
+    color: var(--primary-color);
+    justify-content: end;
+    margin-top: 10px;
+    line-height: 34px;
+}
+ 
+.degree p{
+    font-family: var(--common-font);
+    color: var(--primary-color);
+    justify-content: end;
+    margin-top: 10px;
+    line-height: 34px;
+}
+
+.degree{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #FCF6F5;
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px #8888;
+}
+
+.degree h3{
+    font-family: var(--common-font);
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.skills{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-card{
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.iconss{
+    width: 50%;
+    height: 50%;
+    background-color:#FCF6F5;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 15px #888888;
+}
+
+.skills h3{
+    text-align: center;
+    color: var(--primary-color);
+    font-family: var(--common-font);
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.about{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.project{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.caption{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.caption h4{
+    color: var(--primary-color);
+    font-family: var(--common-font);
+    font-weight: bold;
+    margin-top: 20px; 
+}
+
+.caption p{
+    color: var(--primary-color);
+    font-family: var(--common-font);
+    padding: 10px 0px;
+    line-height: 34px;
+}
+.project h3{
+    color: var(--primary-color);
+    font-family: var(--common-font);
+    text-align: center;
+    font-weight: bold;
+    margin: 20px 0px;
+}
+
+.video-card{
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 15px #888888;
+}
+.videos{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.bg-color{
+   background-color: #FCF6F5
+}
+
 .education{
-    height: 60%;
     width: 60%;
-    float: right;
+    height: auto;
 }
 
-.contact p, h4{
-    font-family: rubik;
-    color: #fff;;
+.footer{
+    background-color: #010d27;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    flex-direction: column;
 }
 
-.menu, .btns {
+.footer h3{
+    color: #FCF6F5;
+    margin: 20px 0px;
+    font-family: var(--common-font);
+    font-weight: bold;
+    text-align: center;
+}
+
+.footer p{
+    color: #FCF6F5;
+    font-family: var(--common-font);
+    line-height: 34px;
+}
+
+.social{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.git i{
+    margin: 40px 0px;
+}
+
+.linkedin{
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+.instagram{
+    display: flex;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+.git{
+    margin: 10px;
+}
+
+.github{
+    cursor: pointer;
+}
+
+.menu-icon, .btns{
 	 
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
