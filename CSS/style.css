@@ -14,28 +14,55 @@
     --primary-color: #2BAE66;
 }
 
-.menu{
+.header-logo{
     display: flex;
-    justify-content: end;
+    flex-direction: row;
+    align-items: center;
+    justify-content:flex-start;
 }
 
-.menu-icon{
-    text-decoration: none;
-    color: var(--primary-color);
-    padding: 15px;
-}
-
-.main-logo{
+.logo{
     color: var(--primary-color) ; 
     font-size: 20px; 
     font-family: Signika; 
     cursor: pointer;
+    padding-top: 10px;
+}
+
+.header-logo a{
+    text-decoration: none;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    flex-direction: row;
 }
 
 .menu a{
     font-family: var(--common-font);
     font-size: 18px;
     font-weight:400;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.menu a:hover{
+    background-color: var(--primary-color);
+    padding: 5px;
+    border-radius: 5px;
+    color: #FCF6F5;
+}
+
+.mobile-menu{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.mobile-menu .toggle{
+    display: none;
 }
 
 .btns{
@@ -48,13 +75,6 @@
 }
 
 .btns:hover{
-    color: var(--primary-color);
-    background-color: #fff;
-    border: 1px solid #13bb79 ;
-}
-
-
-.btns-contact:hover{
     color: var(--primary-color);
     background-color: #fff;
     border: 1px solid #13bb79 ;
@@ -79,27 +99,15 @@
     font-family: var(--common-font);
 }
 
-.car{
-    margin-top: 20px;
-    border: 2px solid;
-}
-
 .icon{
     padding: 15px;
     cursor: pointer;
 }
 
-.sub{
-    margin-bottom: 30px;
-}
-
 .hea{
     position:sticky; top:0; right:0; left:0; z-index:1000;
     background-color: #ffffff;
-}
-
-.headers{
-    padding: 15px;
+    padding: 30px;
 }
 
 .person{
@@ -277,7 +285,8 @@
 }
 
 .footer{
-    background-color: #010d27;
+    /* background-color: #010d27; */
+    background: linear-gradient(180deg, rgb(6, 216, 129), rgb(15, 185, 92));
     display: flex;
     justify-content: center;
     text-align: left;
@@ -298,15 +307,24 @@
     line-height: 34px;
 }
 
-.social{
+.social-icons{
     display: flex;
-    text-align: center;
-    justify-content: center;
+    align-items:center;
+    justify-content: space-evenly;
     flex-direction: row;
 }
 
-.git i{
-    margin: 40px 0px;
+.social-icons a{
+    margin-top: 3px;
+    text-decoration: none;
+}
+
+.details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
 }
 
 .linkedin{
@@ -321,15 +339,11 @@
     cursor: pointer;
 }
 
-.git{
-    margin: 10px;
-}
-
 .github{
     cursor: pointer;
 }
 
-.menu-icon, .btns{
+.menu a, .btns{
 	 
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
@@ -337,3 +351,77 @@
     -o-transition: 0.5s all;
     text-decoration: none!important;
   }
+
+  @media(max-width:992px){
+    .mobile-menu .toggle{
+        display: block;
+        cursor: pointer;
+    }
+
+    .mobile-menu{
+        display: flex;
+        justify-content: end;
+    }
+    .menu{
+        transform: translateY(-450%);
+        transition: transform ease-in-out 0.3s;
+    }
+
+    .menu{
+        background-color: var(--primary-color);
+        width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 80px;
+        border-radius: 5px;
+    }
+
+    .menu a{
+        padding: 10px 15px 5px 0px;
+        color: #FCF6F5;
+    }
+
+    .menu a:hover{
+        background-color: #FCF6F5;
+        color: var(--primary-color);
+    }
+    .menu.is-active{
+        transform: translateY(0%);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-end;
+    }
+}
+
+ /* preloader css starts here */
+
+ .preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader {
+    border: 8px solid #FCF6F5;
+    border-top: 8px solid #2BAE66;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* preloader ends here */
