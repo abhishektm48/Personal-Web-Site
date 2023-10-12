@@ -14,21 +14,33 @@ window.addEventListener("load", function () {
     preloader.style.display = "none";
 });
 
-// WOW JS
+//Scroll top button
 
-let wow = new WOW(
-    {
-      boxClass:     'wow',      // animated element css class (default is wow)
-      animateClass: 'animated', // animation css class (default is animated)
-      offset:       0,          // distance to the element when triggering the animation (default is 0)
-      mobile:       true,       // trigger animations on mobile devices (default is true)
-      live:         true,       // act on asynchronously loaded content (default is true)
-      callback:     function(box) {
-        // the callback is fired every time an animation is started
-        // the argument that is passed in is the DOM node being animated
-      },
-      scrollContainer: null,    // optional scroll container selector, otherwise use window,
-      resetAnimation: true,     // reset animation on end (default is true)
-    }
-  );
-  wow.init();
+let calcSrollValue = () =>
+{
+  let scrollProgress = document.getElementById('progress');
+  let progressValue = document.getElementById('progress-value');
+  let position = document.documentElement.scrollTop;
+  let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  let scrollValue = Math.round((position * 100)/ calcHeight);
+  console.log(scrollValue);
+
+  if(position > 100)
+  {
+    scrollProgress.style.display = 'grid';
+  }
+  else
+  {
+    scrollProgress.style.display = 'none';
+  }
+
+  scrollProgress.addEventListener('click', () =>
+  {
+    document.documentElement.scrollTop = 0;
+  });
+
+  scrollProgress.style.background = `conic-gradient(#06d881 ${scrollValue}%, #fff ${scrollValue}%)`;
+}
+
+window.onscroll = calcSrollValue;
+window.onload = calcSrollValue;
